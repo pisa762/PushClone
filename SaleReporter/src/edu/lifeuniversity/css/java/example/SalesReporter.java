@@ -44,12 +44,14 @@ public class SalesReporter {
 	// input number of sale and the num of sale man
 		Scanner myScanner = new Scanner(System.in);
 		
+		// receive the data input of sales man
 		System.out.println("Input the number sales men: ");
 		numOfSalesman = myScanner.nextInt();		
 		
 		//team come from string sale man
 		team = new Salesman[numOfSalesman];
-		
+		//loop for checking how many sale men get the sale men name 
+		// get each sale men data of their sales 
 		for(int i=0; i<numOfSalesman;i++) {
 			
 			myScanner.nextLine();
@@ -71,7 +73,7 @@ public class SalesReporter {
 	}
 	
 	public void cacluateAverageSales() {
-		
+		//calculate the whole avg of sale from each sales mem sale of their product
 		double sum = 0;
 		
 		for(Salesman sm:team) {
@@ -82,6 +84,7 @@ public class SalesReporter {
 	}
 	
 	public void calculateHighestSales() {
+		// calculate to find who get the highest sale
 		Double currentHighestValue = 0.0;
 		
 		for(Salesman sm:team) {
@@ -117,3 +120,11 @@ public class SalesReporter {
 	}
 
 }
+/*
+* this program use to get the number total of sale men who sell
+* and get their name with the number of their sell 
+* then calculate the avg of each sale men sale
+* and calculate to find out who sale the highest 
+* then show the result of all the sale men and their sale data
+* 
+* */
